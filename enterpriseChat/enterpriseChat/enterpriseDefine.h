@@ -46,4 +46,14 @@ NSLog(@"[%s  line : %d]: " format "\n", __PRETTY_FUNCTION__, __LINE__, ## args);
 // cell line color
 #define ECCELL_LINE [UIColor colorWithWhite:0.667 alpha:0.610]
 
+
+// Parse DEPARTMENT
+#define DEPARTMENT              @"DEPARTMENT"
+#define DEPARTMENTID            @"departmentId"
+#define DEPARTMENTNAME          @"departmentName"
+#define DEPARTMENTHEADPATH      @"departmentHeadPath"
+#define DEPARTMENTMEMBERS       @"departmentMembers"
+#define DEPARTMENTSUBIDS        @"departmentSubIds"
+#define DEPARTMENTSUPID         @"departmentSupId"
+#define DEPARTMENTLEVEL         @"departmentLevel"
 #endif

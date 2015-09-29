@@ -15,9 +15,11 @@
 #import "enterpriseDefine.h"
 #import "UIView+Frame.h"
 #import "UIView+Radius.h"
-#import "UIImageView+WebCache.h"
 #import "NSString+Category.h"
 #import "ECErrorDefs.h"
-#import "EaseMob.h"
+#import <EaseMobSDK/EaseMob.h>
+#import <SDWebImage/UIImageView+WebCache.h>
 #import "ECViewManager.h"
+#import "NSObject+NotificationCenter.h"
+
 #endif

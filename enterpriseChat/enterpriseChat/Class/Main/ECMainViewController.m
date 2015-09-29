@@ -12,6 +12,7 @@
 #import "ECEnterpriseListViewController.h"
 #import "ECSettingsListViewController.h"
 #import "ECNavigationController.h"
+#import "ECParseManager.h"
 
 @interface ECMainViewController () <UITabBarControllerDelegate>
 
@@ -26,6 +27,7 @@
 
 - (void)viewDidLoad{
     [super viewDidLoad];
+    [self updateDBFromParse];
     [[ECViewManager sharedInstance] setupStatusBarStyle2Default];
     [[ECViewManager sharedInstance] setupNavigationBar2Black];
     self.delegate = self;
@@ -39,6 +41,10 @@
 - (void)setupTabbar{
     self.tabBar.tintColor = TABBAR_TINTCOLOR;
     self.tabBar.barTintColor = TABBAR_BARTINTCOLOR;
+}
+
+- (void)updateDBFromParse{
+    [ECParseManager updateDepartmentsFromParse];
 }
 
 #pragma mark - UITabBarControllerDelegate

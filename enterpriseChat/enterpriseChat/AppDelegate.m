@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 #import "ECMainViewController.h"
 #import "AppDelegate+EaseMob.h"
+#import "AppDelegate+Parse.h"
 #import "ECLoginViewController.h"
 
 #import "ECDepartmentModel.h"
@@ -24,6 +25,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     [self easemobApplication:application didFinishLaunchingWithOptions:launchOptions];
+    [self setupParse];
     [[ECViewManager sharedInstance] setupNavigationBar2White];
     [[NSNotificationCenter defaultCenter] addObserver:self
                                              selector:@selector(loginChanged:)
@@ -36,10 +38,10 @@
     }else {
         [self showLoginView];
     }
-    
-    
-    // for test
     [ECDBManager openEasemobDatabaseWithAccount:@"6001"];
+    DLog(@"path -- %@", NSHomeDirectory());
+    /*
+    // for test
 
     NSMutableArray *members = [[NSMutableArray alloc] init];
     for (int i = 0; i < 100; i ++) {
@@ -93,7 +95,7 @@
     model3.departmentSupId = @"003";
     model3.departmentImagePath = @"www.baidu.com";
     [[ECDBManager sharedInstance] insertDepartment:model3 loginAccount:@"6001"];
-
+     */
     
     [self.window makeKeyAndVisible];
     return YES;

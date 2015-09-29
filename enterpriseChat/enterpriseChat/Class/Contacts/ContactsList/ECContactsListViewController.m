@@ -18,30 +18,29 @@
 
 @implementation ECContactsListViewController
 
+- (instancetype)init{
+    if (self = [super init]) {
+        [self addNotificationWithName:UPDATEDEPARTMENTLIST
+                               action:@selector(updateDatabase)];
+    }
+    
+    return self;
+}
+
 - (void)viewDidLoad {
     self.isNeedSearch = YES;
     self.barHiddenWhenSearch = YES;
     [super viewDidLoad];
+    [self updateDatabase];
+}
 
+-(void)updateDatabase{
     // for test
-    NSMutableArray *testAry = [[NSMutableArray alloc] init];
-    NSArray *departments = [[ECDBManager sharedInstance] loadDepartmentWithLevel:0 loginAccount:@"6001"];
-    for (ECDepartmentModel *department in departments) {
-        [testAry addObject:department];
-    }
-    
-    [self.datasource addObject:testAry];
-
-    testAry = [[NSMutableArray alloc] init];
-    for (int i = 0; i < 10; i++) {
-        ECContactModel *contactModel = [[ECContactModel alloc] init];
-        contactModel.nickname = @"名字很长名字很长名字很长名字很长名字很长名字很长名字很长";
-        contactModel.eid = [NSString stringWithFormat:@"我是eid %d",i];
-        contactModel.headImagePath = @"http://img0.bdstatic.com/img/image/chongwu0727.jpg";
-        [testAry addObject:contactModel];
-    }
-    
-    [self.datasource addObject:testAry];
+    [self.datasource removeAllObjects];
+    NSArray *departments = [[ECDBManager sharedInstance]
+                            loadDepartmentWithLevel:0 loginAccount:@"6001"];
+    [self.datasource addObject:departments];
+    [self.tableView reloadData];
 }
 
 #pragma mark - rewrite superClass

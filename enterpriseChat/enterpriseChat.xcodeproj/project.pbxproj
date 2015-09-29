@@ -32,6 +32,9 @@
 		902B0E791B8DB52700EBA3FE /* ECRegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 902B0E781B8DB52700EBA3FE /* ECRegisterViewController.m */; };
 		902B0E7F1B8DBD8F00EBA3FE /* ECLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 902B0E7D1B8DBD8F00EBA3FE /* ECLoginViewController.m */; };
 		902B0E801B8DBD8F00EBA3FE /* ECLoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 902B0E7E1B8DBD8F00EBA3FE /* ECLoginViewController.xib */; };
+		902F70AD1BBA8F75009D4B7F /* AppDelegate+Parse.m in Sources */ = {isa = PBXBuildFile; fileRef = 902F70AC1BBA8F75009D4B7F /* AppDelegate+Parse.m */; settings = {ASSET_TAGS = (); }; };
+		902F70B01BBA9973009D4B7F /* ECParseManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 902F70AF1BBA9973009D4B7F /* ECParseManager.m */; settings = {ASSET_TAGS = (); }; };
+		902F71211BBAAA5E009D4B7F /* NSObject+NotificationCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 902F71201BBAAA5E009D4B7F /* NSObject+NotificationCenter.m */; settings = {ASSET_TAGS = (); }; };
 		903113941BA025B200B0E487 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 903113931BA025B200B0E487 /* Accounts.framework */; };
 		903113961BA025BF00B0E487 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 903113951BA025BF00B0E487 /* Social.framework */; };
 		9031139A1BA02F4900B0E487 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 903113991BA02F4900B0E487 /* StoreKit.framework */; };
@@ -106,6 +109,12 @@
 		902B0E7C1B8DBD8F00EBA3FE /* ECLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECLoginViewController.h; sourceTree = "<group>"; };
 		902B0E7D1B8DBD8F00EBA3FE /* ECLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ECLoginViewController.m; sourceTree = "<group>"; };
 		902B0E7E1B8DBD8F00EBA3FE /* ECLoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ECLoginViewController.xib; sourceTree = "<group>"; };
+		902F70AB1BBA8F75009D4B7F /* AppDelegate+Parse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AppDelegate+Parse.h"; sourceTree = "<group>"; };
+		902F70AC1BBA8F75009D4B7F /* AppDelegate+Parse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AppDelegate+Parse.m"; sourceTree = "<group>"; };
+		902F70AE1BBA9973009D4B7F /* ECParseManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECParseManager.h; sourceTree = "<group>"; };
+		902F70AF1BBA9973009D4B7F /* ECParseManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ECParseManager.m; sourceTree = "<group>"; };
+		902F711F1BBAAA5E009D4B7F /* NSObject+NotificationCenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+NotificationCenter.h"; sourceTree = "<group>"; };
+		902F71201BBAAA5E009D4B7F /* NSObject+NotificationCenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+NotificationCenter.m"; sourceTree = "<group>"; };
 		903113931BA025B200B0E487 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
 		903113951BA025BF00B0E487 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		903113971BA025CE00B0E487 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
@@ -335,6 +344,8 @@
 				90519B8C1B6657750048A081 /* Supporting Files */,
 				902B0E6F1B8DB18F00EBA3FE /* AppDelegate+EaseMob.h */,
 				902B0E701B8DB18F00EBA3FE /* AppDelegate+EaseMob.m */,
+				902F70AB1BBA8F75009D4B7F /* AppDelegate+Parse.h */,
+				902F70AC1BBA8F75009D4B7F /* AppDelegate+Parse.m */,
 			);
 			path = enterpriseChat;
 			sourceTree = "<group>";
@@ -451,6 +462,8 @@
 				90519C371B6660600048A081 /* ECViewManager.m */,
 				90127DC01B8C22CC007534A6 /* ECDBManager.h */,
 				90127DC11B8C22CC007534A6 /* ECDBManager.m */,
+				902F70AE1BBA9973009D4B7F /* ECParseManager.h */,
+				902F70AF1BBA9973009D4B7F /* ECParseManager.m */,
 			);
 			path = Manager;
 			sourceTree = "<group>";
@@ -556,6 +569,8 @@
 				901A5F521B8EC95F0056B37D /* UITextField+Category.m */,
 				90C918921B96CDD6005F1658 /* NSString+Category.h */,
 				90C918931B96CDD6005F1658 /* NSString+Category.m */,
+				902F711F1BBAAA5E009D4B7F /* NSObject+NotificationCenter.h */,
+				902F71201BBAAA5E009D4B7F /* NSObject+NotificationCenter.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -683,6 +698,7 @@
 				90519C1C1B665B470048A081 /* ECChatViewController.m in Sources */,
 				90E921D81B68EFDA00FFB4D7 /* UIView+Frame.m in Sources */,
 				90519C2E1B665CFE0048A081 /* ECSettingsListViewController.m in Sources */,
+				902F70AD1BBA8F75009D4B7F /* AppDelegate+Parse.m in Sources */,
 				902B0E711B8DB18F00EBA3FE /* AppDelegate+EaseMob.m in Sources */,
 				902B0E791B8DB52700EBA3FE /* ECRegisterViewController.m in Sources */,
 				905AFAA41BB4EF6C005EA1AC /* ECDepartmentListManagerViewController.m in Sources */,
@@ -699,6 +715,7 @@
 				90127DCF1B8C2375007534A6 /* ECContactListCell.m in Sources */,
 				9063A39A1B6B50A5007D4ED8 /* RealtimeSearchUtil.m in Sources */,
 				90D793821BA2C55800F6CA41 /* ECScrollView.m in Sources */,
+				902F70B01BBA9973009D4B7F /* ECParseManager.m in Sources */,
 				90519C181B665B030048A081 /* ECChatListViewController.m in Sources */,
 				90519B8F1B6657750048A081 /* main.m in Sources */,
 				90519C321B665F450048A081 /* ECNavigationController.m in Sources */,
@@ -709,6 +726,7 @@
 				9034B3E61B6A1B5F000D0107 /* UIView+Radius.m in Sources */,
 				90FCD81B1BB3D43800FFAF10 /* ECDepartmentListCell.m in Sources */,
 				90C918941B96CDD6005F1658 /* NSString+Category.m in Sources */,
+				902F71211BBAAA5E009D4B7F /* NSObject+NotificationCenter.m in Sources */,
 				90519C2B1B665CE50048A081 /* ECEnterpriseListViewController.m in Sources */,
 				90519C251B665C7D0048A081 /* ECMainViewController.m in Sources */,
 				90858FB61B95C2930088E992 /* ECDepartmentModel.m in Sources */,

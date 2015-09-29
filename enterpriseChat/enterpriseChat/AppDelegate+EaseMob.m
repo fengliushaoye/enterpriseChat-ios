@@ -13,7 +13,7 @@
 didFinishLaunchingWithOptions:(NSDictionary *)launchOptions{
     [[EaseMob sharedInstance] registerSDKWithAppKey:@"easemob-demo#chatdemoui"
                                        apnsCertName:nil
-                                        otherConfig:nil];
+                                        otherConfig:@{kSDKConfigEnableConsoleLogger:@NO}];
     
     [self registerAppDelegate];
     [self registerApns];
